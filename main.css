@@ -1,0 +1,181 @@
+/* =================================
+  Base Element Styles
+==================================== */
+* {
+	box-sizing: border-box;
+}
+.work-p {
+	font-size: .875em;
+	line-height: 1.4;
+	margin: 0 0 1.5em;
+	box-sizing: border-box;
+}
+
+h3 {
+	font-size: 1.3em;
+	line-height: 1.25em;
+	margin-top: .85em;
+	margin-bottom: .5em;
+	text-transform: uppercase;
+}
+
+#three {
+	font: 1em/1.5 'Open Sans', sans-serif;
+	color: #373737;
+	margin: 0;
+}
+
+#skillsBox {
+	opacity: .3;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+
+/* ---- Layout Containers ---- */
+.treehouse-container {
+	width: 94.02985075%;
+	max-width: 1260px;
+	margin: auto;
+}
+.main-header {
+	text-align: center;
+	padding: 1.8em 0;
+}
+.photo-container {
+	text-align: center;
+	margin-bottom: 4em;
+}
+
+/* ---- Page Elements ---- */
+.name {
+	font-size: 1.65em;
+	font-weight: 800;
+	margin: 0 0 1.5em;
+	line-height: 1;
+}
+.name span {
+	font-weight: 300;
+	margin-left: -7px;
+}
+.logo {
+	width: 45px;
+	margin-bottom: .4em;
+}
+.photo {
+	position: relative;
+	line-height: 0;
+	margin-bottom: 2em;
+	overflow: hidden;
+}
+.photo-container img {
+ 	max-width: 100%;
+}
+.button {
+	width: 70%;
+	font-weight: 700;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 10px 0;
+	margin: auto;
+}
+
+/* ---- Photo Overlay ---- */
+.photo-overlay {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0,0,0, .65);
+}
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media (min-width: 0) and (max-width: 768px) {
+	.container {
+		padding: 0 1.225em 2.5em;
+	}
+	#skillsBox img {
+		opacity: 0;
+	}
+	#skillsBox {
+		opacity: 0;
+		background: transparent;
+	}
+
+	.quote {
+		line-height: 1em;
+		font-size: 3em;
+		width: 100%;
+	}
+
+	.row {
+		font-size: 2em;
+		animation: none;
+	    display: block;
+
+	}
+	#column_two img {
+	  width: 50%;
+	  float: right;
+	  transition-delay: 2s;
+	  animation-duration: 2s;
+	}
+
+#typedtext {
+	margin: 25% 0 0;
+	width: 100%;
+}
+
+}
+@media (min-width: 769px) {
+
+
+	.container {
+		padding: 0 2.25em 4em;
+	}
+	.photo-container {
+		width: 48%;
+		float: left;
+		margin-left: 4%;
+	}
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+	.photo-container:nth-child(2n+1) {
+		margin-left: 0;
+		clear: left;
+	}
+	#skillsBox {
+		top: -40em;
+		animation: none;
+		opacity: 1;
+	}
+}
+@media (min-width: 1025px) {
+	.photo-container {
+		width: 30.63973064%;
+	}
+	.photo-container:nth-child(3n+1) {
+		margin-left: 0;
+		clear: left;
+	}
+}
